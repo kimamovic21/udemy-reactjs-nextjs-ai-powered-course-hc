@@ -1,0 +1,73 @@
+Complete React and NextJS course with AI powered Projects
+
+
+
+Section 01: Introduction
+
+
+01. Introduction to the course
+
+-create documentation.txt file for course notes
+-open link: https://nodejs.org/en
+-open link: https://code.visualstudio.com
+-open link: https://git-scm.com
+-open link: https://github.com
+-open link: https://github.com/apps/desktop
+-open link: https://github.com/copilot
+-install VS Code extension: Github Copilot
+
+
+02. Code files to download
+
+
+
+Section 02: Get started with React
+
+
+03. What is React and why to use it ?
+
+
+04. Whats with version if React and React docs ?
+
+-open link: https://react.dev
+
+
+05. We need a bundler - Vite
+
+-open link: https://vite.dev
+
+
+06. Your first React app in browser
+
+-open terminal in VS Code
+-type command: mkdir 01_start
+-type command: cd 01_start
+-type command: npm create vite@latest .
+-follow instructions from documentation
+-explore created folders and files
+-type command: npm run dev
+-open route: http://localhost:5173
+
+
+07. React in online sandbox
+
+-open link: https://codesandbox.io/p/sandbox/react-new
+
+
+08. Understand every file in React
+
+
+09. Pick your path for React course
+
+
+10. Build command in React
+
+-type command: npm run build
+
+
+11. Take your React application to production
+
+-add your project to Github
+-open link: https://vercel.com
+-add your project from Github
+-deploy your project (optional)
