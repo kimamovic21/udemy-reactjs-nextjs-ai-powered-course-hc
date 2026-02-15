@@ -71,3 +71,70 @@ Section 02: Get started with React
 -open link: https://vercel.com
 -add your project from Github
 -deploy your project (optional)
+
+
+
+Section 03: Component ecosystem of React
+
+
+12. Configure Tailwind CSS in React application
+
+-create folder 02_design_work
+-type command: npm create vite@latest .
+-open link: https://tailwindcss.com
+-open link: https://tailwindcss.com/docs/installation/using-vite
+-follow instructions from documentation
+-in component App.jsx create HTML elements with Tailwind CSS classes
+-type command: npm run dev
+-open route: http://localhost:5173
+
+
+13. Building card with Tailwind CSS
+
+-in component App.jsx create HTML elements with Tailwind CSS classes
+-open route: http://localhost:5173
+
+
+14. What are props in React ?
+
+-open link: https://react.dev/learn/passing-props-to-a-component
+
+
+15. Build your first component
+
+-open link: https://react.dev/learn/your-first-component
+-in folder src create folder components
+-in folder components create component Card.jsx
+-open link: https://react.dev/learn/importing-and-exporting-components
+-in component App.jsx import component Card
+-open route: http://localhost:5173
+
+
+16. Custom components with props
+
+-open link: https://react.dev/learn/passing-props-to-a-component
+-in component Card add to function Card parameter destructured props
+-in component App.jsx add to components Cards props
+-create component Button.jsx
+-in components App and Card import component Button
+-open route: http://localhost:5173
+
+
+17. Building faster with Tailwind components
+
+-open link: https://tailwindcss.com/plus/ui-blocks
+-create components Header.jsx and Hero.jsx
+-in component App.jsx import components Header and Hero
+
+
+18. Overview of Shadcn components and setup
+
+-open link: https://ui.shadcn.com
+-open link: https://ui.shadcn.com/docs/installation/vite
+-open link: https://ui.shadcn.com/docs/components/radix/button
+-open link: https://ui.shadcn.com/docs/components/radix/navigation-menu
+-follow instructions from documentation
+-open folder ui and check tsx components
+
+
+19. Project ahead - Get ready
