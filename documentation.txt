@@ -35,10 +35,14 @@ Section 02: Get started with React
 05. We need a bundler - Vite
 
 -open link: https://vite.dev
+-open link: https://www.npmjs.com/package/vite
 
 
 06. Your first React app in browser
 
+-open link: https://www.npmjs.com
+-open link: https://www.npmjs.com/package/react
+-open link: https://www.npmjs.com/package/react-dom
 -open terminal in VS Code
 -type command: mkdir 01_start
 -type command: cd 01_start
@@ -138,3 +142,55 @@ Section 03: Component ecosystem of React
 
 
 19. Project ahead - Get ready
+
+
+
+Section 04: Your first React project with state
+
+
+20. Introduction to counter project with forms
+
+
+21. Javascript run time - Node and Bun for React
+-open link: https://bun.com
+-open link: https://www.npmjs.com/package/bun
+-create folder 03_counter_state
+-type command: bun create vite
+-type command: npm i
+-type command: npm run dev
+-open route: http://localhost:5173
+
+
+22. Writing HTML elements and forms in React
+-open link: https://react.dev/reference/react-dom/components/style
+-open link: https://react.dev/learn/responding-to-events
+-in component App.jsx create HTML elements with inline style
+-add to input and button elements events
+
+
+23. Behind the scene of react state
+-open link: https://react.dev/learn/managing-state
+
+
+24. What are hooks in React ?
+-open link: https://react.dev/reference/react/hooks
+-open link: https://react.dev/reference/react/useState
+-open link: https://react.dev/learn/writing-markup-with-jsx
+-in component App.jsx import function useState from package react
+-invoke function useState()
+-create state variable count and set function setCount
+-in jsx add create input element and button element
+-in jsx in events onClick invoke function anonymous function
+-in anonymous function pass set function setCount
+
+
+25. Going in depth of useState hook
+-in component App.jsx create function incrementHandler()
+
+
+26. Handling form in React
+-open link: https://react.dev/reference/react-dom/components/form
+-create state variable countToSet and set function setCountToSet
+-in jsx add create new input element and button element
+-add to input element prop value and event onChange
+-add to button element onClick
