@@ -194,3 +194,49 @@ Section 04: Your first React project with state
 -in jsx add create new input element and button element
 -add to input element prop value and event onChange
 -add to button element onClick
+
+
+
+Section 05: Queue Management System Project
+
+
+27. Queue management project walkthrough
+
+
+28. Planning the application workflow
+-analyze the plan of action
+-components: form & display component
+-create folder 04_queue_management 
+-type command: npm create vite@latest .
+-type command: npm i
+-type command: npm run dev
+-open route: http://localhost:5173
+
+
+29. Learn the data flow in components in React
+-create component QueueForm.jsx
+-in component App.jsx import component QueueForm
+
+
+30. Handle form and pass data to parent
+-in component QueueForm.jsx create state variables and state functions
+-create function handleSubmit()
+-in jsx create HTML elements with attributes
+
+
+31. A little trip to map and filter in Javascript
+
+
+32. Understand conditional rendering
+-open link: https://react.dev/learn/conditional-rendering
+-create component QueueDisplay.jsx
+-in component QueueDisplay.jsx create function getStatusColor()
+-in component App.jsx import component QueueDisplay
+-in jsx add to components QueueForm and QueueDisplay props
+-in jsx add logic for conditional rendering
+
+
+33. Debugging in multi components
+-in App.jsx function create functions updateStatus(), addToQueue and removeFromQueue()
+-in component QueueDisplay.jsx create HTML elements with classes
+-in App.css file add style for classes
