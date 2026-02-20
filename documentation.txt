@@ -240,3 +240,77 @@ Section 05: Queue Management System Project
 -in App.jsx function create functions updateStatus(), addToQueue and removeFromQueue()
 -in component QueueDisplay.jsx create HTML elements with classes
 -in App.css file add style for classes
+
+
+
+Section 06: Advance Props and components
+
+
+34. Different types of props and Context
+
+
+35. Setting up Vite app for props in React
+-create folder 05_prop_guide
+-create new application
+-create folder components and jsx components
+-in component create functions Navigation() and AppContent()
+-open route: http://localhost:5173
+
+
+36. Design button variations with props
+-in component BasicProps.jsx create function Button()
+-in function Button create button element with events and prop className
+-add to prop className dynamic classes
+-in jsx add components Button with props
+
+
+37. Children props in React
+-open link: https://react.dev/reference/react/Children
+-in component ChildrenProps() create component Card
+-create variable object const colorClasses
+-in jsx add components Card with props
+-create function Container()
+-in jsx add component Container with opening and closing tag
+
+
+38. Complex prop with complex data in React
+-in component ComplexProps create component UserProfileCard()
+-create variable const users 
+-add to function UserProfileCard props
+-in component UserProfileCard() create HTML elements with Tailwind CSS classes
+-add conditional renderings for user stats and actions
+
+
+39. useRef and forwardRef in React
+-open link: https://react.dev/learn/referencing-values-with-refs
+-create function CustomInput()
+-in function RefProps add components CustomInput with props
+
+
+40. Context API and prop drilling
+
+
+41. Create your first context API provider
+-open link: https://react.dev/reference/react/createContext
+-in component ThemeToggle.jsx import and invoke function createContext()
+-import and invoke function useState()
+-create state variable theme and set function setTheme
+-create and export function ThemeProvider()
+-create function toggleTheme()
+
+
+42. Create your first custom hook
+-open link: https://react.dev/reference/react/useContext
+-create ThemeContext.js file
+-in ThemeContext.js file create and export function createContext()
+-create useTheme.js file
+-in useTheme.js import and invoke function useContext()
+-create and export function useTheme()
+-add condition if (!context) 
+-in component ThemeToggler.jsx import component ThemeContext and function useTheme
+-create end export function ThemeToggleButton()
+-create and export function ThemedCard()
+-in component App.jsx import components and function useTheme
+
+
+43. Using context in multiple components
