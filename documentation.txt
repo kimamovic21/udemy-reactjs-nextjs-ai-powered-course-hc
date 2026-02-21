@@ -152,6 +152,7 @@ Section 04: Your first React project with state
 
 
 21. Javascript run time - Node and Bun for React
+
 -open link: https://bun.com
 -open link: https://www.npmjs.com/package/bun
 -create folder 03_counter_state
@@ -162,6 +163,7 @@ Section 04: Your first React project with state
 
 
 22. Writing HTML elements and forms in React
+
 -open link: https://react.dev/reference/react-dom/components/style
 -open link: https://react.dev/learn/responding-to-events
 -in component App.jsx create HTML elements with inline style
@@ -169,10 +171,12 @@ Section 04: Your first React project with state
 
 
 23. Behind the scene of react state
+
 -open link: https://react.dev/learn/managing-state
 
 
 24. What are hooks in React ?
+
 -open link: https://react.dev/reference/react/hooks
 -open link: https://react.dev/reference/react/useState
 -open link: https://react.dev/learn/writing-markup-with-jsx
@@ -185,10 +189,12 @@ Section 04: Your first React project with state
 
 
 25. Going in depth of useState hook
+
 -in component App.jsx create function incrementHandler()
 
 
 26. Handling form in React
+
 -open link: https://react.dev/reference/react-dom/components/form
 -create state variable countToSet and set function setCountToSet
 -in jsx add create new input element and button element
@@ -204,6 +210,7 @@ Section 05: Queue Management System Project
 
 
 28. Planning the application workflow
+
 -analyze the plan of action
 -components: form & display component
 -create folder 04_queue_management 
@@ -214,11 +221,13 @@ Section 05: Queue Management System Project
 
 
 29. Learn the data flow in components in React
+
 -create component QueueForm.jsx
 -in component App.jsx import component QueueForm
 
 
 30. Handle form and pass data to parent
+
 -in component QueueForm.jsx create state variables and state functions
 -create function handleSubmit()
 -in jsx create HTML elements with attributes
@@ -228,6 +237,7 @@ Section 05: Queue Management System Project
 
 
 32. Understand conditional rendering
+
 -open link: https://react.dev/learn/conditional-rendering
 -create component QueueDisplay.jsx
 -in component QueueDisplay.jsx create function getStatusColor()
@@ -237,6 +247,7 @@ Section 05: Queue Management System Project
 
 
 33. Debugging in multi components
+
 -in App.jsx function create functions updateStatus(), addToQueue and removeFromQueue()
 -in component QueueDisplay.jsx create HTML elements with classes
 -in App.css file add style for classes
@@ -250,6 +261,7 @@ Section 06: Advance Props and components
 
 
 35. Setting up Vite app for props in React
+
 -create folder 05_prop_guide
 -create new application
 -create folder components and jsx components
@@ -258,6 +270,7 @@ Section 06: Advance Props and components
 
 
 36. Design button variations with props
+
 -in component BasicProps.jsx create function Button()
 -in function Button create button element with events and prop className
 -add to prop className dynamic classes
@@ -265,6 +278,7 @@ Section 06: Advance Props and components
 
 
 37. Children props in React
+
 -open link: https://react.dev/reference/react/Children
 -in component ChildrenProps() create component Card
 -create variable object const colorClasses
@@ -274,6 +288,7 @@ Section 06: Advance Props and components
 
 
 38. Complex prop with complex data in React
+
 -in component ComplexProps create component UserProfileCard()
 -create variable const users 
 -add to function UserProfileCard props
@@ -282,6 +297,7 @@ Section 06: Advance Props and components
 
 
 39. useRef and forwardRef in React
+
 -open link: https://react.dev/learn/referencing-values-with-refs
 -create function CustomInput()
 -in function RefProps add components CustomInput with props
@@ -291,6 +307,7 @@ Section 06: Advance Props and components
 
 
 41. Create your first context API provider
+
 -open link: https://react.dev/reference/react/createContext
 -in component ThemeToggle.jsx import and invoke function createContext()
 -import and invoke function useState()
@@ -300,6 +317,7 @@ Section 06: Advance Props and components
 
 
 42. Create your first custom hook
+
 -open link: https://react.dev/reference/react/useContext
 -create ThemeContext.js file
 -in ThemeContext.js file create and export function createContext()
@@ -314,3 +332,66 @@ Section 06: Advance Props and components
 
 
 43. Using context in multiple components
+
+
+
+Section 07: Custom hooks
+
+
+44. Setting up application for custom hooks
+
+-open link: https://react.dev/learn/reusing-logic-with-custom-hooks
+-create folder 06_custom_hook
+-create new React application
+-create folder components and jsx components Cart, CartItem and ProductCard
+-create folder data and products.js file
+-create folder hooks and useCart.js file
+
+
+45. Designing components for shopping cart
+
+-open link: https://react-icons.github.io/react-icons
+-open link: https://www.npmjs.com/package/react-icons
+-type command: npm i react-icons
+-in component ProductCard add to function ProductCard() props product and onAddToCart
+-in component Cart.jsx import component CartItem
+-add to function Cart() props cart, onUpdateQuantity, onRemove, total
+-add condition if (cart.length === 0)
+-in jsx add component CartItem with props
+-create HTML elements with classes
+-in component CartItem.jsx add to function CartItem() prop item, onUpdateQuantity, onRemove
+-import react icons
+-in jsx create HTML elements with classes
+
+
+46. useEffect hook for shopping cart
+
+-open link: https://react.dev/reference/react/useEffect
+
+
+47. Sync across the tabs
+
+-in useCart.js function create and export function useCart()
+-import functions useState, useEffect and useMemo from package react
+-in function useCart() create state variable cart and set function setCart
+-invoke two functions useEffect()
+
+
+48. Handling cart operations
+
+-in useCart.js file create functions addToCart(), removeFromCart() and updateQuantity
+
+
+49. Finish up with custom hook features
+
+-create variable const total
+-add object return with variables and functions
+
+
+50. Debugging the application - Thought process
+
+-in component App.jsx import and invoke function useCart()
+-in jsx create HTML elements with classes
+-import variable products
+-import component Cart and ProductCard
+-in jsx add to components props
