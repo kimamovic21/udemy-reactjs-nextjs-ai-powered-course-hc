@@ -395,3 +395,58 @@ Section 07: Custom hooks
 -import variable products
 -import component Cart and ProductCard
 -in jsx add to components props
+
+
+
+Section 08: State Management - Zustand
+
+
+51. State management libraries
+
+-open link: https://zustand-demo.pmnd.rs/
+-open link: https://www.npmjs.com/package/zustand
+-type command: npm i zustand
+
+
+52. Create your first store in Zustand
+
+-create folder 07_zustand and install React app
+-create folder store and counterStore.js file
+-in counterStore.js file import and invoke function create() from package zustand
+-create and export variable useCounterStore
+-create folder components and component Counter.jsx
+-in component Counter.jsx import and invoke function useCounterStore()
+-in jsx create button elements with event onClick
+-in component App.jsx import component Counter
+
+
+53. Subscribe only to what you need
+
+-create component CounterValue.jsx
+-in component CounterValue.jsx import and invoke function useCounterStore()
+-create variable const count
+-create component CounterButton.jsx
+-in component CounterButton.jsx import and invoke function useCounterStore()
+-create variables const increase and const decrease
+-in jsx create button elements with event onClick
+
+
+54. One store with multiple slices
+
+-in folder store create appStore.js file
+-in appStore.js file create and export function create()
+-create component Navbar.jsx
+-in component Navbar.jsx import and invoke function useAppStore() from appStore.js file
+-create variables user, theme, logout and toggleTheme
+
+
+55. Async actions for API calls
+
+-in folder store create postsStore.js file
+-in postsStore.js file import and invoke function create()
+-create and export variable usePostsStore
+-create component Posts.jsx
+-import and invoke function usePostsStore()
+-import and invoke function useEffect()
+-add conditions if (loading) and if (error)
+-in jsx invoke function posts.map()
