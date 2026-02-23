@@ -450,3 +450,37 @@ Section 08: State Management - Zustand
 -import and invoke function useEffect()
 -add conditions if (loading) and if (error)
 -in jsx invoke function posts.map()
+
+
+
+Section 11: Next.js: Getting Started & Fundamentals
+
+
+106. Introduction to Next.js & why use frameworks ?
+
+-open link: https://nextjs.org
+
+
+107. What is router in Next.js, App Router vs Page Router 
+
+-open link: https://nextjs.org/docs/pages/building-your-application/routing
+
+
+108. Installation & writing your first Hello world in Next.js
+
+-type command: node -v
+-type command: npm -v
+-type command: npx -v
+-type command: mkdir my-app
+-type command: cd my-app
+-type command: npx create-next-app@latest .
+-type command: npm run dev
+-open route: http://localhost:3000
+
+
+109. Next.js js vs just React
+
+
+110. Next.js folder structure breakdown 
+
+-open link: https://nextjs.org/docs/app/getting-started/project-structure
