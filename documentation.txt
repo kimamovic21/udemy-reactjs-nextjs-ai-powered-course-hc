@@ -484,3 +484,52 @@ Section 11: Next.js: Getting Started & Fundamentals
 110. Next.js folder structure breakdown 
 
 -open link: https://nextjs.org/docs/app/getting-started/project-structure
+
+
+
+Section 12: Project Structure & File System Routing
+
+
+111. Folder and files conventions in Next.js
+
+-open link: https://nextjs.org/docs/app/api-reference/file-conventions
+-open link: https://nextjs.org/docs/app/getting-started/layouts-and-pages
+
+
+112. Types of folders and files in Next.js
+
+-open link: https://nextjs.org/learn/dashboard-app/static-and-dynamic-rendering
+
+
+113. Nested routing and dynamic routing
+
+-open link: https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes
+
+
+114. Mini project - project overview & Header setup
+
+-create folder mini-project-1
+-install Next.js application
+-in folder app create folder about and component page.jsx
+-create folder components and footer.jsx and navigation.jsx
+-in component layout.jsx import components footer and navigation
+-open link: https://nextjs.org/docs/pages/api-reference/components/link
+
+
+115. Mini project - Building Footer
+
+
+116. Mini project - Building a responsive Home page
+
+-open link: https://lucide.dev/icons
+-in component app/page.jsx create HTML elements with Tailwind CSS classes
+
+
+117. Mini project - Making responsive about page
+
+-in component app/page.jsx create HTML elements with Tailwind CSS classes
+
+
+118. Mini project - Making responsive contact page
+
+-in component contact/page.jsx create HTML elements with classes
