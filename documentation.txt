@@ -533,3 +533,82 @@ Section 12: Project Structure & File System Routing
 118. Mini project - Making responsive contact page
 
 -in component contact/page.jsx create HTML elements with classes
+
+
+
+Section 13: Advanced Routing
+
+
+119. Nested dynamic routing
+
+-create folder module-3
+-create folders products, [id] and component page.jsx
+-add do component [id]/page.jsx prop params
+-create folders reviews, [reviewId] and component page.jsx
+-open route: http://localhost:3000/
+-open route: http://localhost:3000/reviews
+-open route: http://localhost:3000/reviews/[id]
+
+
+120. Catch all segment and optional catch all segment
+
+-create folders docs, [[...slug]] and component page.jsx
+-in component page.jsx add to component prop params
+-open route: http://localhost:3000/docs
+-open route: http://localhost:3000/docs/[slug]
+
+
+121. Routes group and private folder
+
+-create folder (auth)
+-in folder (auth) create folders signup, login and forget
+
+
+122. Intercepting routes - same and one level up of intercepting routes
+
+-open link: https://nextjs.org/docs/app/api-reference/file-conventions/intercepting-routes
+-create folder dashboard and component page.jsx
+-in folder dashboard create folder (.)reports
+-open route: http://localhost:3000/dashboard
+-open route: http://localhost:3000/dashboard/reports
+-create folder profile and component page.jsx
+-in folder dashboard create folder (..profile) and component page.jsx
+
+
+123. Intercepting routes - two and root level up of intercepting routes
+
+-create folder section and component page.jsx
+-create folder settings and component page.jsx
+-in folder settings create folder (..)(..)settings and component page.jsx
+-create folder admin and component page.jsx
+-open route: http://localhost:3000/section
+-open route: http://localhost:3000/settings
+
+
+124. Introduction of parallel routes and slots in Next.js
+
+-create folder dashboard-main and components page.jsx and layout.jsx
+-open route: http://localhost:3000/dashboard-main
+-create folder @feed and component page.jsx
+-create folder @stats and component page.jsx
+-create components @tab1 and @tab2 and components page.jsx
+-open route: http://localhost:3000/dashboard-main/tab1
+
+
+125. Unmatched routes and default page convention
+
+-in folder @tab1 create folder tab1 and component page.jsx
+-open route: http://localhost:3000/dashboard-main/tab1
+-in folder @tab2 create folder tab2 and component page.jsx
+-open route: http://localhost:3000/dashboard-main/tab2
+-in folder @tab1 create component default.jsx
+-in folder dashboard-main create component default.jsx
+
+
+126. Making your custom not-found page
+
+-open route: https://nextjs.org/docs/app/api-reference/file-conventions/not-found
+-in folder app create component not-found.jsx
+-open link: https://undraw.co
+-in folder public add image not-found.svg
+-open route: http://localhost:3000/test
