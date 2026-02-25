@@ -612,3 +612,24 @@ Section 13: Advanced Routing
 -open link: https://undraw.co
 -in folder public add image not-found.svg
 -open route: http://localhost:3000/test
+
+
+
+Section 14: Rendering & Components deep dive
+
+
+127. Server components
+
+-open link: https://nextjs.org/docs/app/getting-started/server-and-client-components
+-create folder module-4
+-in component app/page.jsx invoke function await fetch()
+-create variable const data
+-open link: https://stackoverflow.com/questions/74471642/button-onclick-event-handlers-cannot-be-passed-to-client-component-props
+
+
+128. Client components and which one to choose (Client vs Server)
+
+-open link: https://nextjs.org/docs/app/api-reference/directives/use-client
+-in folder app create folder client and component page.jsx
+-in component page.jsx add directive "use client"
+-open route: http://localhost:3000/client
