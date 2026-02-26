@@ -633,3 +633,96 @@ Section 14: Rendering & Components deep dive
 -in folder app create folder client and component page.jsx
 -in component page.jsx add directive "use client"
 -open route: http://localhost:3000/client
+
+
+
+Section 15: Backend Route handlers
+
+
+129. What is route handlers in Next.js and GET endpoint in Next.js
+
+-create folder module-5
+-create new application
+-open route: https://nextjs.org/docs/pages/building-your-application/routing/api-routes
+-open link: https://nextjs.org/docs/app/getting-started/route-handlers
+-in folder app create folder hello and route.js file
+-in route.js file import object NextResponse
+-in route.js file create and export async function GET()
+-open link: https://nextjs.org/docs/app/api-reference/functions/next-response
+-open route: http://localhost:3000/hello
+-in folder hello create component page.jsx
+-open link: https://nextjs.org/docs/messages/conflicting-public-file-page
+-create folder api
+-move folder hello and route.js file to folder api
+-open route: http://localhost:3000/api/hello
+-in component app/page.jsx invoke function fetch()
+
+
+130. Creating POST endpoint in Next.js
+
+-open link: https://nextjs.org/docs/app/api-reference/file-conventions/route
+-create folder create-user and route.js file
+-in create-user/route.js file create and export async function POST()
+-add blocks try - catch
+-in block try invoke function await request.json()
+-add condition if (!name || !email || !age)
+-create variable const emailExists
+-add condition if (emailExists)
+-create variable const newUser
+-invoke function users.push(newUser)
+-add statement return NextResponse.json()
+-in block catch (error) add statement return NextResponse.json()
+-open Postman and test endpoint: http://localhost:3000/api/create-user with method POST
+
+
+131. Creating PUT endpoint in Next.js
+
+-in folder hello create folder [id] and route.js file
+-in [id]/route.js file create and export async function GET()
+-open route: http://localhost:3000/api/hello/1
+-create folder put-user
+-in folder put-user create folder [id] and route.js file
+-in route.js create and export async function PUT()
+-open Postman and test endpoint: http://localhost:3000/api/put-user/[id] with method PUT
+
+
+132. Creating PATCH endpoint in Next.js
+
+-create folder patch-user
+-in folder patch-user create folder [id] and route.js file
+-in route.js file create and export async function PATCH()
+-open Postman and test endpoint: http://localhost:3000/api/patch-user/[id] with method PATCH
+
+
+133. Creating DELETE endpoint in Next.js
+
+-create folder delete-user and route.js file
+-in folder delete-user create folder [id] and route.js file
+-in route.js file create and export async function DELETE()
+-open Postman and test endpoint: http://localhost:3000/api/delete-user/[id] with method DELETE
+
+
+134. Exploring Query Parameter
+
+-in api/hello/route.js file create variables searchParams, name, age and filteredUsers
+-add conditions if (age) and if (name)
+-in object NextResponse.json() add variable filteredUsers
+-open route: http://localhost:3000/api/hello
+-open route: http://localhost:3000/api/hello?age=30
+-open route: http://localhost:3000/api/hello?name=john
+
+
+135. Headers in Next.js
+
+-open link: https://nextjs.org/docs/app/api-reference/functions/headers
+-create folder profile and route.js file
+-in profile/route.js create and export async function GET()
+-import and invoke function headers()
+
+
+136. Cookies in Next.js
+
+-open link: https://nextjs.org/docs/app/api-reference/functions/cookies
+-create folder cookies and route.js file
+-in cookies/route.js file create and export async function GET()
+-import and invoke function cookies()
