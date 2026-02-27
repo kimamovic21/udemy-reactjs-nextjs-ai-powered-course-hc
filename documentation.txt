@@ -726,3 +726,74 @@ Section 15: Backend Route handlers
 -create folder cookies and route.js file
 -in cookies/route.js file create and export async function GET()
 -import and invoke function cookies()
+
+
+137. Notes App - Project setup & database connection
+
+-create folder mini-project-2
+-create Next project
+-open link: https://www.mongodb.com/
+-open Mongo db Compass
+-create files .env and example.env
+-create folder lib and db.js file
+-open link: https://mongoosejs.com
+-open link: https://www.npmjs.com/package/mongoose
+-type command: npm i mongoose
+-in db.json file import object mongoose
+-create and export async function dbConnect()
+-in component app/page.jsx import function dbConnect()
+-make function Home() async
+-open link: https://nextjs.org/docs/pages/api-reference/edge
+
+
+138. Notes App - Mongo DB model, Create API & Add note form
+
+-create folder models and Note.js file
+-in Note.js file create and export model Note
+-in folder app create folder api
+-in folder api create folder notes and route.js file
+-in notes/route.js file import object NextResponse, function dbConnect and model Note
+-create and export async functions GET() and POST()
+-create folder components and NotesClient.jsx
+-in component NotesClient.jsx add directive "use client"
+-create state variables and set functions
+-in jsx create form element with Tailwind elements
+-create elements input, textarea and button for creating a note
+-create function createNote()
+-open route: http://localhost:3000
+
+
+139. Notes App - Fetch & display notes with cards, useState & toast
+
+-in component app/page.jsx import component NotesClient and model Note
+-create async function getNotes()
+-create variable const notes
+-in jsx add component NotesClient with prop initialNotes
+-in component NotesClient.jsx add to function NotesClient() prop initialNotes
+-in jsx add ternary condition notes.length === 0
+-open route: http://localhost:3000 and create a note
+-open link: https://react-hot-toast.com
+-open link: https://www.npmjs.com/package/react-hot-toast
+-type command: npm i react-hot-toast
+-in component layout.jsx import component Toaster
+-in component NotesClient.jsx import function toast
+-in function createNote() add function toast
+
+
+140. Notes App - Delete endpoint & removing notes
+
+-in folder notes create folder [id] and route.js
+-in [id]/route.js import function dbConnect, model Note and object NextResponse
+-create and export async function DELETE()
+-in component NotesClient.jsx create async function deleteNote()
+-open route: http://localhost:3000 and delete a note
+
+
+141. Notes App - Edit endpoint & conditional editing form
+
+-in [id]/route.js file create and export async function PUT()
+-in component NotesClient.jsx create state for editing
+-create async function updateNote()
+-create functions startEdit() and cancelEdit()
+-add logic for editing a note
+-open route: http://localhost:3000 and edit a note
