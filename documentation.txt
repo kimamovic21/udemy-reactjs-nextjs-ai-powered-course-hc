@@ -797,3 +797,79 @@ Section 15: Backend Route handlers
 -create functions startEdit() and cancelEdit()
 -add logic for editing a note
 -open route: http://localhost:3000 and edit a note
+
+
+
+Section 16: Core Functions and Hooks in Next.js
+
+
+142. Caching & revalidate made easy - Next.js extended fetch API
+
+-open link: https://nextjs.org/docs/app/api-reference/functions/fetch
+
+
+143. Handling 404s with the notFound() function in Next.js
+
+-create folder module-6
+-open link: https://nextjs.org/docs/app/api-reference/functions/not-found
+-create folders reviews and [id]
+-in folder [id] create components page.jsx and not-found.jsx
+-in component page.jsx import function notFound
+-open route: http://localhost:3000/reviews/[id]
+
+
+144. useParams Hook 
+
+-open link: https://nextjs.org/docs/app/api-reference/functions/use-params
+-create folders products, [id] and [slug]
+-in folder [slug] create component page.jsx
+-in component [slug]/page.jsx import and invoke function useParams()
+-add directive "use client"
+
+
+145. usePathname Hook
+
+-open link: https://nextjs.org/docs/app/api-reference/functions/use-pathname
+-create folder components and component navigation.jsx
+-create folder about and component page.jsx
+-in component about/page.jsx import component Navigation
+-in component navigation.jsx import and invoke function usePathname()
+-create function isActive()
+-in folder about create component layout.jsx
+-in folder about create folder dashboard and component page.jsx
+-create folder settings and component page.jsx
+
+
+146. useSearchParams Hook
+
+-open link: https://nextjs.org/docs/app/api-reference/functions/use-search-params
+-create folder search and component page.jsx
+-in component search/page.jsx import and invoke function useSearchParams()
+-create variables searchParams, query, category, page and allParams 
+-open link: http://localhost:3000/search?q=laptop&category=electronics
+
+
+147. useRouter Hook
+
+-open link: https://nextjs.org/docs/app/api-reference/functions/use-router
+-create folder login and component page.jsx
+-in component login/page.jsx import and invoke function useRouter()
+-create variable const router
+-create functions handleClick() and handleGoBack()
+-in jsx create button elements with events onClick 
+-open route: http://localhost:3000/login
+-in folder products create component page.jsx
+-in component products/page.jsx import and invoke function useRouter()
+-create variable const router
+-create functions handleGoBack() and handleForward()
+-in jsx create button elements with events onClick 
+-open route: http://localhost:3000/products
+
+
+148. Redirect function in Next.js
+
+-open link: https://nextjs.org/docs/app/guides/redirecting
+-in component app/page.jsx import and invoke function redirect()
+-create variable const isLogged
+-add condition if (!isLogged)
+-open route: http://localhost:3000
