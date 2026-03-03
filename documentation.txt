@@ -873,3 +873,64 @@ Section 16: Core Functions and Hooks in Next.js
 -create variable const isLogged
 -add condition if (!isLogged)
 -open route: http://localhost:3000
+
+
+
+Section 17: Server Actions & App Optimizations
+
+
+149. Deep dive into server actions & why they outshine API Routes
+
+-create folder module-7
+-create folder components and component user-form.jsx
+-in component app/page.jsx import component UserForm
+-in component user-form.jsx, in jsx create form element
+-open link: https://nextjs.org/docs/app/api-reference/directives/use-server
+-create function createUser()
+-add directive "use server"
+-create folder actions and index.js file
+-move function createUser to index.js file
+-in folder components create form.jsx
+-open link: https://he.react.dev/reference/react-dom/hooks/useFormState
+-in component form.jsx create and invoke function useFormState
+-in jsx create form element with event action
+-open route: http://localhost:3000/
+
+
+150. Mastering Fonts in Next.js Google & Local made easy
+
+-open link: https://nextjs.org/docs/app/getting-started/fonts
+-open link: https://fonts.google.com
+-in folder app create folder example-font and component page.jsx
+-in component example-font/page.js create variables roboto, poppins and jockey_one
+-open route: http://localhost:3000/example-font
+-create folder fonts and loveday.ttf file
+-in component example-font/page.jsx create variable myFont
+
+
+151. Forms in Next.js prefetching, navigation & server actions
+
+-open link: https://nextjs.org/docs/app/api-reference/components/form
+-create folder products and component page.jsx
+-in folder index.js create function getProductData()
+-open link: http://localhost:3000/products
+-in component products import and invoke function getProductData()
+-in component app/page.jsx import component Form
+-open route: http://localhost:3000 and search for product 
+-open link: https://nextjs.org/docs/app/api-reference/file-conventions/loading
+-in folder products create component loading.jsx
+
+
+152. Optimized Images in Next.js with the Image Component
+
+-open link: https://nextjs.org/docs/app/api-reference/components/image
+-create folder example-image and component page.jsx
+-in component example-image/page.jsx import component Image
+-open route: http://localhost:3000/example-image
+-open link: https://nextjs.org/docs/messages/next-image-unconfigured-host
+-in next.config.mjs file add object images
+
+
+153. Next.js Link & Script
+
+-open link: https://nextjs.org/docs/app/api-reference/components/script
