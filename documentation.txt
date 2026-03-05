@@ -934,3 +934,76 @@ Section 17: Server Actions & App Optimizations
 153. Next.js Link & Script
 
 -open link: https://nextjs.org/docs/app/api-reference/components/script
+
+
+154. Contact Form project - Introduction, setup & database connection
+
+-create folder mini-project-3
+-open route: http://localhost:3000
+-create folder lib and db.js file
+-in db.js file add db connection logic
+-create files .env and example.env
+-in .env file create variable MONGODB_URI
+
+
+155. Contact Form project - Contact mode, Shadcn UI & Form UI
+
+-create folder models and Contact.js file
+-create model Contact
+-in folder app/page.jsx create HTML elements with Tailwind CSS classes
+-create folder components and component contact-form.jsx
+-in component app/page.jsx import component ContactForm
+-open link: https://ui.shadcn.com
+-open link: https://ui.shadcn.com/docs/installation
+-follow instructions from tutorial
+-in component contact-form.jsx import shadcn components
+-open route: http://localhost:3000
+
+
+156. Contact Form project - Create contact server action & form integration
+
+-create folder actions and index.js file
+-in index.js file import function dbConnect and model Contact
+-create and export async function createContact()
+-in component contact-form.jsx import function createContact
+-create async function onSubmit() 
+-open route: http://localhost:3000 and create a contact
+-in jsx add conditional rendering message &&
+-open Mongo database to see saved contact
+
+
+157. Contact form project - Get contact list & render in server component
+
+-in folder app create folder contacts and component page.jsx
+-in component contacts/page.jsx create HTML elements with Tailwind CSS classes
+-in folder components create component contacts-list.jsx
+-in component contacts/page.jsx import component ContactsList
+-in index.js file create and export async function getContacts()
+-in component contacts-list.jsx import and invoke function getContacts()
+-in jsx create HTML elements with Tailwind CSS classes
+-add ternary condition contacts.length === 0
+-import shadcn components and react icons
+-open route: http://localhost:3000/contacts
+
+
+158. Contact form project - update contact status & revalidate path
+
+-in index.js file create and export async function updateContact()
+-in component contacts-list.jsx import function updateContact
+-in jsx add conditional renderings contact.status === "new" and contact.status === "read"
+-open route: http://localhost:3000/contacts and click button Mark as Read
+-click button Mark as Replied
+-open link: https://nextjs.org/docs/app/api-reference/functions/revalidatePath
+-in index.js file import function revalidatePath
+
+
+159. Contact form project - Contact status component, unstable_cache & revalidate tag
+
+-open link: https://nextjs.org/docs/app/api-reference/functions/revalidateTag
+-open link: https://nextjs.org/docs/app/api-reference/functions/unstable_cache
+-in index.js file import functions revalidateTag and unstable_cache from package next/cache
+-create and export async function getContactStats()
+-in folder components create component contact-stats.jsx
+-in component contact-stats.jsx import and invoke function getContactStats()
+-import shadcn components
+-open route: http://localhost:3000/contacts to see stats
