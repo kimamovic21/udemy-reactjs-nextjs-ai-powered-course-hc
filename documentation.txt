@@ -1007,3 +1007,47 @@ Section 17: Server Actions & App Optimizations
 -in component contact-stats.jsx import and invoke function getContactStats()
 -import shadcn components
 -open route: http://localhost:3000/contacts to see stats
+
+
+
+Section 18: Middleware, Metadata and SEO
+
+
+160. Static vs dynamic metadata best practices for layouts and pages
+
+-open link: https://nextjs.org/docs/app/getting-started/metadata-and-og-images
+-update variable const metadata in component app/page.jsx
+-open route: http://localhost:3000/contacts
+-create folder about and component page.jsx 
+-in component about/page.jsx create variable const metadata
+-create folders blog, [slug] and component page.jsx
+-in component [slug]/page.jsx create and export async function generateMetadata()
+-open route: http://localhost:3000/blog/test
+
+
+161. Title metadata deep dive default, template & absolute properties explained
+
+-create folder (auth)
+-in folder (auth) create component layout.jsx and folders login and signup
+-in component layout.jsx create variable metadata
+-in component signup/page.jsx create variable metadata
+-open route: http://localhost:3000/signup
+-open route: http://localhost:3000/login
+
+
+162. How to add and update favicons in Next.js projects
+
+-open link: https://nextjs.org/docs/app/api-reference/file-conventions/metadata
+-replace existing favicon with new one
+-open route: http://localhost:3000
+
+
+163. Static open graph image
+
+
+164. Dynamic open graph images in Next.js building
+
+-create folders api, og and route.js file
+-in route.js file import function ImageResponse
+-import and invoke async function GET()
+-in component [slug]/page.jsx create variable const ogImageUrl
