@@ -1051,3 +1051,55 @@ Section 18: Middleware, Metadata and SEO
 -in route.js file import function ImageResponse
 -import and invoke async function GET()
 -in component [slug]/page.jsx create variable const ogImageUrl
+
+
+
+Section 19: State management & data fetching
+
+
+165. Introduction to Tanstack Query and initializing in query provider in Next.js app
+
+-open link: https://tanstack.com
+-create folder module-9
+-create folder components and component query-provider.jsx
+-in component query-provider.jsx import function QueryClient and component QueryClientProvider
+-create and export function QueryProvider()
+-in jsx add component QueryClientProvider with prop client
+-add directive "use client"
+-in component layout.jsx import component QueryProvider
+
+
+166. useQuery in Tanstack query - simplifies data fetching by removing boilerplate
+
+-install Shadcn library
+-create folders api, users and route.js file
+-in route.js file create variable let users
+-create and export async function GET()
+-create component users-list.jsx 
+-in users-list.jsx component add directive "use client"
+-import shadcn components
+-create async function fetchUsers()
+-import and invoke function useQuery()
+-add conditions if (isLoading) and if (isError)
+-in component app/page.jsx import component UsersList
+-open route: http://localhost:3000 to see users
+
+
+167. useMutation in Tanstack query - mutations, query invalidation and optimistic UI
+
+-in route.js create and export async function POST()
+-in folder components add-user-form.jsx
+-in component add-user-form.jsx add directive "use client"
+-import functions useState, useMutation and shadcn components
+-in component app/page.jsx import component AddUserForm
+-create state variables and set functions
+-create function handleSubmit()
+-create variable const mutation
+-create async function addUser()
+-in jsx add form element with event onSubmit
+-open route: http://localhost:3000 and create user
+
+
+168. What is hydration & caching in Next.js - a quick guide
+
+-open link: https://nextjs.org/docs/app/guides/caching
