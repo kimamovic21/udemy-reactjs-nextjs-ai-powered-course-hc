@@ -1103,3 +1103,109 @@ Section 19: State management & data fetching
 168. What is hydration & caching in Next.js - a quick guide
 
 -open link: https://nextjs.org/docs/app/guides/caching
+
+
+169. ToDo App - DB, Schema & Query provider setup
+
+-create folder mini-project-4
+-open link: https://zod.dev
+-type command: npm i zod 
+-in folder lib create db.js file
+-in db.js file add database connection logic
+-create files .env and example.env
+-in .env file create variable MONGODB_URI
+-type command: npm run dev
+-open route: http://localhost:3000
+-create folder and todo.js file
+-in todo.js file create model Todo
+-in folder components create folder providers and component query-provider.jsx
+-in component query-provider.jsx add directive "use client"
+-in component query-provider.jsx add query provider logic
+-in component app/page.jsx import and invoke function connectDB()
+
+
+170. ToDo App - Add Todo with Zod validation & mutation hooks
+
+-open link: https://react-hook-form.com
+-open link: https://www.npmjs.com/package/react-hook-form
+-type command: npm i react-hook-form
+-open link: https://www.npmjs.com/package/@hookform/resolvers
+-type command: npm i @hookform/resolvers
+-open link: https://www.npmjs.com/package/sonner
+-type command: npm i sonner
+-create folder actions and todo-action.js file
+-in todo-action.js file import functions revalidatePath, connectDB and model Todo
+-create folder validations and todo.js file
+-in todo.js file create and export variable createTodoSchema 
+-in todo-actions.js file import variable createTodoSchema
+-create and export async function createTodo()
+-in component app/page.jsx create HTML elements with Tailwind CSS classes
+-in folder components create component todo-form.jsx
+-in component app/page.jsx import component TodoForm
+-in component todo-form.jsx add directive "use client"
+-import functions useState, useToast, useForm, zodResolver, createTodoSchema and shadcn components
+-in folder hooks create use-create-todo.js file
+-in use-create-todo.js file import function createTodo
+-create and export function useTodos()
+-create folder store and todo-store.js 
+-in todo-store.js file import functions create and devtools
+-create and export variable const useTodoStore
+-in use-create-todo.js file import function useTodoStore
+-create and export function useCreateTodo()
+-import function useMutation
+-create and export object const todoKeys
+-in component todo-form.jsx create state variable isOpen and set function setIsOpen
+-create variable const createTodoMutation
+-create variable const form
+-create async function onSubmit()
+-add condition if (!isOpen)
+-in jsx add shadcn components
+-add to form element event onSubmit
+-open route: http://localhost:3000 and create todo
+-open Mongo DB to see saved todo
+
+
+171. ToDo App - Get & display todos with Zustand and TanStack query
+
+-in todo-actions.js file create and export async function getTodos()
+-in use-create-todo.js file create and export function useTodos()
+-in folder components create component todo-list.jsx
+-in component todo-list.jsx add directive "use client"
+-import functions useTodos and useTodoStore
+-invoke function useTodos()
+-add conditions if (isLoading) and if (error)
+-create component todo-filter.jsx
+-in component todo-filter.jsx add directive "use client"
+-import and invoke function useTodoStore()
+-import shadcn components
+-create variable array const filters
+-in component app/page.jsx import component TodoFilter
+-in component todo-list.jsx create variable filteredTodos
+-add condition if (filteredTodos.length === 0) 
+-create component todo-item.jsx
+-in component todo-item.jsx add directive "use client"
+-import shadcn components
+-in component todo-list.jsx import component TodoIdem
+-in component todo-item.jsx create function getPriorityColor()
+-open route: http://localhost:3000 and see created todos
+
+
+172. ToDo App - Mark todo completed with mutations
+
+-in component todo-list.jsx create variables setTodos, todos and filter
+-import functions useEffect and useMemo
+-in todo-actions.js file create and export async function toggleTodo
+-in use-create-todo.js file create and export function useToggleTodo()
+-in todo-store.js file create function updateTodo
+-in component todo-item.jsx create async function handleToggle()
+-open route: http://localhost:3000 and toggle todo as marked
+
+
+173. ToDo App - Delete todo with mutations
+
+-in todo-actions.js file create and export async function deleteTodo()
+-in todo-store.js create function removeTodo
+-in use-create-todo.js file export function useDeleteTodo()
+-in component todo-item.jsx import function useDeleteTodo
+-create async function handleDelete()
+-open route: http://localhost:3000 and delete todo
