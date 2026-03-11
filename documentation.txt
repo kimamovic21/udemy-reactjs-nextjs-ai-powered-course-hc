@@ -1261,3 +1261,38 @@ Section 20: Database & ORM Integration
 -in component app/page.jsx import component PostList
 -in jsx add component PostList with prop posts
 -open route: http://localhost:3000
+
+
+177. Introduction to Drizzle ORM with Next.js & Neon: Setup + User schema
+
+-open link: https://orm.drizzle.team
+-create folder drizzle-orm
+-type command: npm i drizzle-orm @neondatabase/serverless dotenv
+-type command: npm i -D drizzle-kit tsx
+-in folder lib create db.js file
+-create files .env and example.env
+-create variable DATABASE_URL
+-create folder schema and index.js file
+-in index.js file create and export variable const users
+-create drizzle.config.js file 
+-in drizzle.config.js file create and export function defineConfig()
+-type command: npx drizzle-kit generate
+-type command: npx drizzle-kit push
+
+
+178. CRUD operations with Drizzle ORM & Next.js server actions
+
+-create folder actions and index.js file
+-in index.js file add directive "use server"
+-import object db, variable users, functions eq and revalidatePath
+-create and export async functions createUser(), getAllUsers(), getUserById(), updateUser(), deleteUser()
+
+
+179. Creating user management UI: UserList + UserForm using shadcn and Drizzle ORM
+
+-create folder components and components user-form and user-list
+-in component app/page.jsx import created components
+-in jsx create HTML elements with Tailwind CSS classes
+-in component user-form.jsx add logic for adding a new user
+-in component user-list.jsx add logic for displaying users
+-open route: http://localhost:3000
