@@ -1209,3 +1209,55 @@ Section 19: State management & data fetching
 -in component todo-item.jsx import function useDeleteTodo
 -create async function handleDelete()
 -open route: http://localhost:3000 and delete todo
+
+
+
+Section 20: Database & ORM Integration
+
+
+174. ORM & Prisma in Next.js: From setup to seeding
+
+-open link: https://stackoverflow.com/questions/1279613/what-is-an-orm-how-does-it-work-and-how-should-i-use-one
+-open link: https://www.prisma.io
+-create folder prima-orm
+-type command: npx prisma init
+-type command: npm i @prisma/client
+-create .env and example.env files
+-create variable DATABASE_URL
+-open link: https://neon.com
+-create database on Neon service
+-in schema.prisma create model Post
+-create folder lib and db.js file
+-in db.js file add database connection setup
+-type command: npx prisma migrate dev
+-add migration name: adding post schema
+-type command: npx prisma db push
+-in component app/page.jsx make function Home() async
+-import object prisma from db.js file
+-create seed.js file
+-in seed.js file import object prisma from db.js file
+-create and export async function main()
+-type command: node seed.js
+-create folder actions and index.js file
+-in index.js file import object prisma from db.js file
+-create and export async function seedDB()
+-in component app/page.jsx import and invoke function seedDB()
+-type command: npx prisma studio
+-open route: http://localhost:5555
+-create and export async function createPost()
+-in jsx create HTML elements with Tailwind CSS classes
+
+
+175. Creating & fetching data with Prisma ORM
+
+-in index.js file create and export async function getPost()
+-in component app/page.jsx import and invoke function getPost()
+
+
+176. Building a PostList component with Prisma in server components
+
+-in component app/page.jsx create variable const posts
+-create folder components and component PostList.jsx
+-in component app/page.jsx import component PostList
+-in jsx add component PostList with prop posts
+-open route: http://localhost:3000
