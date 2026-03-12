@@ -1296,3 +1296,67 @@ Section 20: Database & ORM Integration
 -in component user-form.jsx add logic for adding a new user
 -in component user-list.jsx add logic for displaying users
 -open route: http://localhost:3000
+
+
+
+Section 21: Authentication & Authorization
+
+
+180. Introduction to Authentication and Authorization in Next.js
+
+
+181. Mastering Better Auth in Next.js: Google & Github login with Shadcn UI
+
+-create folder better-auth
+-open link: https://better-auth.com
+-type command: npm i better-auth
+-create files .env and example.env
+-create variables DATABASE_URL, BETTER_AUTH_SECRET and BETTER_AUTH_UR
+-in folder lib create auth.js file
+-in auth.js file create and export variable const auth
+-type command: npx prisma init
+-in folder lib create db.js file
+-type command: npm i @prisma/client
+-type command: npx @better-auth/cli generate
+-type command: npx prisma generate
+
+
+182. Configure Better Auth database URL + Google & Github secrets
+
+-open Neon service and create database
+-open link: https://better-auth.com/docs/authentication/github
+-open link: https://github.com/settings/applications
+-register new application
+-open link: https://console.cloud.google.com
+-create application
+-follow instructions from video
+-open link: https://better-auth.com/docs/authentication/google
+-in .env file create variables GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET
+
+
+183. Better Auth in action database migration, API & Auth client setup
+
+-type command: npx @better-auth/cli/migrate
+-type command: npx prisma migrate dev
+-create folders api/auth/[...all] and route.js file
+-in folder lib create auth-client.js file
+-in auth-client.js file import and invoke function createAuthClient()
+-type command: npx prisma studio 
+-type command: npm run dev
+-open route: http://localhost:3000
+
+
+184. Better Auth Login with UI ShadCN + Google & Github Sign-in
+
+-create folder login and component page.jsx
+-open route: http://localhost:3000/login
+-create folder dashboard and component page.jsx
+-open route: http://localhost:3000/dashboard
+
+
+185. Better Auth security route protection, sessions & sign-out flow
+
+-in folder components create component home.jsx
+-in component app/page.jsx import component HomeView from component home.jsx
+-create component login-form.jsx
+-in component login/page.jsx import component LoginForm
