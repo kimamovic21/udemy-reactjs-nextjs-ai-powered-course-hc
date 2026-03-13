@@ -1360,3 +1360,29 @@ Section 21: Authentication & Authorization
 -in component app/page.jsx import component HomeView from component home.jsx
 -create component login-form.jsx
 -in component login/page.jsx import component LoginForm
+
+
+186. Clerk authentication in Next.js intro, middleware custom sign-in/up setup guide
+
+-create folder clerk-auth
+-open link: https://clerk.com
+-create new project
+-open link: https://clerk.com/docs/nextjs/getting-started/quickstart
+-create middleware.js file
+-in middleware.js file import and invoke function clerkMiddleware()
+-in component layout.jsx import component ClerkProvider
+-open link: https://clerk.com/docs/nextjs/guides/development/custom-sign-in-or-up-page
+-in folder app create folders sign-in, [[...sign-in]] and component page.jsx
+-in component page.jsx import component SignIn  
+-in middleware.js file import and invoke function createRouteMatcher()
+-open link: https://clerk.com/docs/nextjs/guides/development/custom-sign-up-page
+-in folder app create folders sign-in, [[...sign-up]] and component page.jsx
+-in component page.jsx import component SignUp
+-create files .env and example.env
+-in .env file create CLERK env variables
+-in component app/page.jsx import component UserButton
+-type command: npm run dev
+-open route: http://localhost:3000
+-create folder client and component page.jsx
+-open route: http://localhost:3000/client
+-open Clerk dashboard and select option Users
