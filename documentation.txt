@@ -1386,3 +1386,92 @@ Section 21: Authentication & Authorization
 -create folder client and component page.jsx
 -open route: http://localhost:3000/client
 -open Clerk dashboard and select option Users
+
+
+
+Section 22: Payments & Billing
+
+
+187. Introduction of billing and payment modules and Stripe component setup
+
+-create folder module-12
+-create folders stripe and components
+-in folder components create component stripe-component.jsx
+
+
+188. Next.js & Stripe: Building a payment flow
+
+-open link: https://stripe.com
+-create files .env and example.env
+-in .env file create variables NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY and STRIPE_SECRET_KEY
+-open link: https://www.npmjs.com/package/stripe
+-type command: npm i stripe
+-create folder modules
+-in folder modules move folder stripe
+-in folder stripe create folder config
+-in folder config create files stripe-client.js and stripe.js
+-in schema.prima update model User with fields plan, stripe_subscription and stripeCustomerId
+-create model StripeSubscription
+-type command: npx prisma migrate dev
+-in folder stripe create folder action and index.js file
+-in index.js file create and export async function createCheckoutSession()
+-add logic for upgrading user to pro plan
+-open route: http://localhost:3000 and click button Upgrade to Pro
+-open Stripe dashboard to see transactions
+-in folder api create folders webhook and stripe
+-in folder stripe create route.js file
+-in route.js file create and export async function POST()
+-add logic for Stripe webhook
+-open link: https://docs.stripe.com/stripe-cli
+-download and install Stripe CLI
+-type command: stripe logs tail
+-type command: stripe listen --forward-to localhost:3000/api/webhook/stripe
+-in .env file create variable STRIPE_WEBHOOK_SECRET
+-open route: http://localhost:3000 and click button Upgrade to Pro
+-use better auth env variables from previous project
+
+
+189. Integrating Polar with Next.js and Better auth
+
+-open link: https://polar.sh
+-create new organization
+-type command: npm i @polar-sh/better-auth @polar-sh/sdk
+-create new token
+-in .env file create variables POLAR_ACCESS_TOKEN and POLAR_SUCCESS_URL
+-in folder modules create folder polar
+-in folder polar create folders components and config
+-in folder config create polar.js file
+-in polar.js file copy code from documentation
+-update auth.js file with polar payment 
+-type command: npx prisma migrate reset
+-in folder components create component polar-component.jsx
+-in component app/page.jsx import component PolarComponent
+-open route: http://localhost:3000 and click buttons Use Pro Features and Manage Subscription
+
+
+190. Next.js + Razorpay order creation and payment verification
+
+-in schema.prisma file create enum razorpay_plan
+-update model User with field razorpayPlan
+-type command: npx prisma migrate dev
+-open link: https://razorpay.com
+-create new account
+-in .env file create variable
+-in folder api create folders razorpay 
+-in folder razorpay create folders create-order and verify-and-update
+-open link: https://www.npmjs.com/package/razorpay
+-type command: npm i razorpay
+-in create-order create route.js file
+-in route.js file create and export async function POST()
+-add code from documentation
+-in verify-and-update/route.js file create and export async function POST()
+-in folder modules create folder razorpay
+-in folder razorpay create folders action and components
+-in folder action create index.js file
+-in index.js file create and export async function getCurrentRazorpayStatus()
+-in folder components create component razorpay-component.jsx
+-in component app/page.jsx import component RazorpayComponent
+-in component layout.jsx import component Script
+-in jsx add component Script with props
+-open route: http://localhost:3000 and click button Upgrade to Pro
+-open Vercel and deploy project
