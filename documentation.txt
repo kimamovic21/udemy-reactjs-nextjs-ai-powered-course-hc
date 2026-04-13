@@ -1475,3 +1475,161 @@ Section 22: Payments & Billing
 -in jsx add component Script with props
 -open route: http://localhost:3000 and click button Upgrade to Pro
 -open Vercel and deploy project
+
+
+
+Section 23: Leetcode Clone
+
+
+191. Introduction and demo of Leetcode project
+
+-create folder leetcode and install project
+
+
+192. Project setup - Installing Next.js and initializing Shadcn/ui
+
+-install Shadcn library
+
+
+193. Database setup made easy: Prisma initialization & Dockerized db for Next
+
+-type command: npm i prisma --save-dev
+-type command: npm i @prisma/client
+-type command: npm prisma init
+-create project on Neon
+-create .env file and variable DATABASE_URL
+-create docker-compose.yml file
+-type command: npx prisma migrate dev
+-type command: npx prisma db push
+-in folder lib create db.js file
+-in db.js file add a logic for db connection
+-type command: npx prisma generate
+-type command: npm run dev
+
+
+194. Authentication using Clerk - setup, Github OAuth & Custom auth pages
+
+-open Clerk and create a new project
+-type command: npm i @clerk/nextjs
+-add code from documentation
+-in .env file create variables NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY and CLERK_SECRET_KEY
+-create middleware.js file
+-in middleware.js file import and invoke functions clerkMiddleware and createRouteMatcher
+-in folder app create folder (auth)
+-in folder (auth) create folders sign-in and sign-up
+-in folder sign-in create folder [[...sign-in]] and component page.jsx
+-in folder sign-up create folder [[...sign-up]] and component page.jsx
+-create component layout.jsx
+-create six variables for CLerk auth fallback
+-in component app/page.jsx import component UserButton from package clerk
+-in schema.prisma file create model User
+-open route: http://localhost:3000
+
+
+195. User onboarding with Prisma - defining schema & server actions
+
+-in schema.prisma update model User
+-create enum UserRole
+-type command: npx prisma migrate dev
+-type command: npx prisma db push
+-open route: http://localhost:3000 and sign in
+-create folder modules
+-in folder modules create folders auth, home, problems and profile
+-in folder auth create folders actions and hooks
+-in folder actions create index.js file
+-in index.js file add directive "use server"
+-import instance db from db.js file
+-import function currentUser from package clerk
+-create and export async function onBoardUser()
+-type command: npx prisma studio
+
+
+196. Build a responsive Navbar & homepage with dark/light mode + Role-based auth
+
+-create folder (root)
+-in folder (root) create components page.jsx and layout.jsx
+-in folder home create folder components
+-in folder components create component navbar.jsx
+-in folder components create folder providers
+-in folder providers create component theme-provider.jsx
+-in component layout.jsx import component ThemeProvider
+-in index.js file create and export async function currentUserRole()
+-in layout.jsx component import and invoke function currentUserRole()
+-create variable const userRole
+-in jsx add to component Navbar prop userRole
+
+
+197. Judge0 setup: Self-hosting locally or Cloud integration via RapidAPI
+
+-open link: https://judge0.com
+-open link: https://rapidapi.com
+-open link: https://github.com/judge0/judge0/blob/master/README.md
+-follow instructions from documentation
+-download and extract Judge0 release archive
+-follow instructions from tutorial
+-open route: http://localhost:2358
+
+
+198. Create problem: Defining Prisma schema & linking with admin user
+
+-in schema.prisma file create model Problem
+-type command: npx prisma migrate dev
+-type command: npm run dev
+
+
+199. Problem creation - integrating Judge0 to validate & save testcases in db
+
+-create folder api
+-in folder api create folder create-problem
+-in folder create-problem create route.js file
+-in route.js file create and export async function POST
+-in folder lib create judge0.js file
+-in judge0.js file create and export function getJudge0LanguageId()
+-create and export async function submitBatch()
+-in env file create variable JUDGE0_API_URL
+-create and export async function pollBatchResults()
+-in index.js file create and export async function getCurrentUser()
+-add a logic for creating a problem
+
+
+200. Role-based access & UI for problem creation form with sample problems
+
+-create folder create-problem and component page.jsx
+-in folder problems create folder components and component create-problem-form.jsx
+-open link: https://www.npmjs.com/package/monaco-editor
+-type command: npm i @monaco-editor/react
+-add a logic for creating a problem
+-open route: http://localhost:3000/create-problem
+-in .env file create variables RAPIDAPI_KEY and RAPIDAPI_HOST
+
+
+201. Problem route page: fetching all problems with table UI, filters & search
+
+-in folder problems create folder actions and index.js file
+-in index.js file create and export async functions getAllProblems(), getProblemById() and deleteProblem()
+-in folder (root) create folder problems and component page.jsx
+-in folder components create problem-table.jsx
+-in schema.prisma create model ProblemSolved
+-add logic for fetching problems
+-open route: http://localhost:3000/problems
+
+
+202. Problem solving page: fetch by id with header, left/right sections & full layout
+
+-open route: http://localhost:3000/problems
+-in folder problem create folder [id] and component id
+-add logic for fetching problem by id
+-open route: http://localhost:3000/problems/[id]
+
+
+203. Submissions & test cases: Prisma schema for storing execution data
+
+-in schema.prisma file update models with new fields
+-create model Submission
+-type command: npx prisma migrate dev
+-type command: npx prisma db push
+-in actions/index.js file create and export async function executeCode()
+-in component [id]/page.jsx add logic for submitting data
+
+
+204. Submission history: fetch user-specific Submissions & build history component 
