@@ -1669,3 +1669,77 @@ Section 23: Leetcode Clone
 -in folder components create components user-info.jsx and profile-stats.jsx
 -open route: http://localhost:3000/profile
 -create component solved-problems.jsx
+
+
+
+Section 24: V0 Clone
+
+
+208. Introduction and demo of V0 clone project
+
+
+209. Project setup - Installing Next.js and initializing Shadcn/ui
+
+
+210. Database setup made easy - Prisma initialization & Dockerized db for Next.js
+
+
+211. Authentication using Clerk - Clerk setup, Github and Google OAuth & custom auth
+
+
+212. Create a user-friendly header that changes when users sign in
+
+
+213. Building your app's entry point: Modern home page with templates & project form
+
+
+214. Understanding and implementing background jobs with Inngest
+
+-type command: npm i inngest
+-type command npx inngest-cli@latest dev
+-open Inngest development server
+-open route: http://localhost:8288
+-open route: http://localhost:8288/runs
+-add inngest setup
+-open route: http://localhost:3000
+
+
+215. AI background jobs with Inngest
+
+-open link: https://aistudio.google.com/api-keys
+-in .env file create variable GEMINI_API_KEY
+-type command: npm i @inngest/agent-kit
+-add inngest agent kit setup
+
+
+216. Hands-on with E2B sandboxes - Dockerize and run Next.js apps
+
+-open link: https://e2b.dev
+-type command: npm i @e2b/code-interpreter
+-install CLI
+-type command: npm i -g @e2b/cli
+-type command: e2b sandbox list
+
+
+217. Inngest agents kit - adding file, terminal & API tools to your AI agent
+
+
+218. Build the projects backend with Prisma, server actions and background jobs
+
+
+219. Add project list and project view components with dynamic project route segment
+
+
+220. Build the messages backend with Prisma, background jobs with user and assistant
+
+
+221. Build file explorer & syntax highlighting with sandbox integration of Iframe
+
+
+222. AI agents setup - title generation & response summarization
+
+
+223. Pricing page with payment integration and rate limiting for free and pro users
+
+
+224. AI agent memory setup - long-tem persistence with Inngest

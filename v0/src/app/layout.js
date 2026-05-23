@@ -1,0 +1,47 @@
+import { Poppins } from "next/font/google";
+import "./globals.css";
+import { QueryProvider } from "../components/query-provider";
+import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ClerkProvider } from "@clerk/nextjs";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+export const metadata = {
+  title: "V0 Clone",
+  description: "A clone of V0",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <ClerkProvider
+      appearance={{
+        variables: {
+          colorPrimary: "#006239",
+        },
+      }}
+    >
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={`${poppins.variable} ${poppins.className} antialiased`}
+        >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <QueryProvider>
+              <Toaster />
+              {children}
+            </QueryProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
+  );
+}
