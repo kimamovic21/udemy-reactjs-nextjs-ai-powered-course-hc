@@ -1743,3 +1743,32 @@ Section 24: V0 Clone
 
 
 224. AI agent memory setup - long-tem persistence with Inngest
+
+
+
+Section 25: T3-chat clone
+
+
+225. Introduction and demo of T3-chat project
+
+226. Project setup - installing Nextjs and initializing Shadcn/ui
+
+227. Database setup made easy: Prisma initialization & Dockerized db for Next.js
+
+228. Authentication using Better-auth, Github & custom auth pages
+
+229. Designing an interactive chat interface: Sidebar, Header & Theming
+
+230. Implementing model Selection: Openrouter, fetching models and UI setup
+
+231. End-to-end chat setup: backend schema, API and UI hooks
+
+232. Building chat sidebar: data fetch, Zustand store and component design
+
+233. Active chat sidebar items: Dynamic page & messaging components
+
+234. Advanced chat API development: Streaming, message conversion and persistence
+
+235. Building chat page UI: Dynamic message rendering and auto stream trigger
+
+236. Finalizing the chat app: Auto-trigger stream response & project wrap-up
