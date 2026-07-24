@@ -1772,3 +1772,19 @@ Section 25: T3-chat clone
 235. Building chat page UI: Dynamic message rendering and auto stream trigger
 
 236. Finalizing the chat app: Auto-trigger stream response & project wrap-up
+
+
+
+Section 26: Supabase master class
+
+237. Introduction and demo of project using Supabase
+
+238. Installing Next.js and initializing Shadcn/ui
+
+239. Next.js + Supabase: the ultimate developer onboarding flow
+
+240. User authentication mastery: from sign-up to logout in Next.js
+
+241. Supabase in action: build a secure blog with storage, RLS & Editor.js
+
+242. Supabase secure routes: fetch, display and debug blog content
