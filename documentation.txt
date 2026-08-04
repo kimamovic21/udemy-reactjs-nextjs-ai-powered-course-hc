@@ -1788,3 +1788,17 @@ Section 26: Supabase master class
 241. Supabase in action: build a secure blog with storage, RLS & Editor.js
 
 242. Supabase secure routes: fetch, display and debug blog content
+
+
+
+Section 27: Convex MasterClass 
+
+243. Introduction and project demo
+
+244. Convex quickstart: Next.js + shadcn/ui setup in minutes
+
+245. Why Convex ? Master the future of realtime full-stack development
+
+246. User-ready Convex: Authentication + profile components in one go
+
+247. Convex in action: schema, functions and UI for a complete Todo app
